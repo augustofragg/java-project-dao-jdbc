@@ -27,11 +27,22 @@ public class Program2 {
 		
 		System.out.println("\n===== Teste 3: Insert");
 		
+		/*
 		Department newDep = new Department(null,"Music");
 		
 		depDao.insert(newDep);
 		
 		System.out.println("Inserted! New id " + newDep.getId() );
+		
+		System.out.println("\n===== Teste 3: Insert");
+		*/
+		
+		dep = depDao.findById(7);
+		dep.setName("Tools");
+		
+		depDao.update(dep);
+		
+		System.out.println("Update completed");
 		
 	}
 }
