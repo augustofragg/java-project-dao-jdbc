@@ -1,5 +1,7 @@
 package application;
 
+import java.util.List;
+
 import model.dao.Daofactory;
 import model.dao.DepartmentDao;
 import model.entities.Department;
@@ -15,7 +17,13 @@ public class Program2 {
 		
 		System.out.println(dep);
 		
+		System.out.println("\n=====Teste 2: findAll");
 		
+		List<Department> list = depDao.findAll();
+		
+		for(Department d : list) {
+			System.out.println(d);
+		}
 		
 	}
 }
